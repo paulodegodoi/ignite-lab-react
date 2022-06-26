@@ -2,6 +2,7 @@ import { FormEvent, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Logo } from "../components/Logo"
 import { useCreateSubscriberMutation } from "../graphql/generated"
+import vscodeImage from "../assets/vscode.png"
 
 export const Subscribe = () => {
   const navigate = useNavigate()
@@ -44,7 +45,10 @@ export const Subscribe = () => {
           <strong className="text-2xl mb-6 block">
             Inscreva-se gratuitamente!
           </strong>
-          <form onSubmit={handleSubscribe} className="flex flex-col gap-2 w-full">
+          <form
+            onSubmit={handleSubscribe}
+            className="flex flex-col gap-2 w-full"
+          >
             <input
               className="bg-gray-900 rounded px-5 h-14"
               type="text"
@@ -67,7 +71,7 @@ export const Subscribe = () => {
           </form>
         </div>
       </div>
-      <img src="/src/assets/vscode.png" alt="vscode" className="mt-10" />
+      <img src={vscodeImage} alt="vscode" className="mt-10" />
     </div>
   )
 }
